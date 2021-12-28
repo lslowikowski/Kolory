@@ -90,40 +90,45 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void ustawKolor(){
-        int kolorTekstu = Color.rgb(255 - skladowaCzerwona, 255 - skladowaZielona, 255 - skladowaNiebieska);
+    public void ustawKolor() {
+        int kolorTekstu = Color.rgb(255 - skladowaCzerwona,
+                                   255 - skladowaZielona,
+                                    255 - skladowaNiebieska);
         int kolorTla = Color.rgb(skladowaCzerwona, skladowaZielona, skladowaNiebieska);
         kolor.setBackgroundColor(kolorTla);
         kolor.setTextColor(kolorTekstu);
-        kolor.setText("Tu pojawi się kolor: #" + decToHex(skladowaCzerwona) + decToHex(skladowaZielona) + decToHex(skladowaNiebieska));
+        kolor.setText("Tu pojawi się kolor: #" +
+                       decToHex(skladowaCzerwona) +
+                       decToHex(skladowaZielona) +
+                       decToHex(skladowaNiebieska));
     }
 
-    public String decToHex(int dziesietna){
+    public String decToHex(int dziesietna) {
         String hexStr = "";
         String resztaStr = "";
         int wynik = dziesietna;
-        while (wynik >0 ){
+        while (wynik > 0) {
             int reszta = wynik % 16;
-            if(reszta>=0 && reszta <= 9) {
-                resztaStr= "" + reszta;
+            if (reszta >= 0 && reszta <= 9) {
+                resztaStr = "" + reszta;
             } else if (reszta == 10) {
-                resztaStr= "A";
+                resztaStr = "A";
             } else if (reszta == 11) {
-                resztaStr= "B";
+                resztaStr = "B";
             } else if (reszta == 12) {
-                resztaStr= "C";
+                resztaStr = "C";
             } else if (reszta == 13) {
-                resztaStr= "D";
+                resztaStr = "D";
             } else if (reszta == 14) {
-                resztaStr= "E";
+                resztaStr = "E";
             } else if (reszta == 15) {
-                resztaStr= "F";
+                resztaStr = "F";
             }
-            wynik  = wynik / 16;
+            wynik = wynik / 16;
             hexStr = resztaStr + hexStr;
         }
-        if(hexStr.length()==0) hexStr = "00";
-        if(hexStr.length()==1) hexStr = "0" +hexStr;
+        if (hexStr.length() == 0) hexStr = "00";
+        if (hexStr.length() == 1) hexStr = "0" + hexStr;
         return hexStr;
     }
 }
