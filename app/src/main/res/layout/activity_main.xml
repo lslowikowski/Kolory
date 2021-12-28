@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/kolor"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Tu pojawi się kolor"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/wartscCzerwona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Składowa czerwona: 0"
+        android:paddingStart="10dp"
+        android:textColor="#FF0000"/>
+    <SeekBar
+        android:id="@+id/czerwony"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="0"
+        android:max="255"
+        android:progress="0" />
+    <TextView
+        android:id="@+id/wartscZielona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Składowa zielona: 0"
+        android:paddingStart="10dp"
+        android:textColor="#00FF00"/>
+    <SeekBar
+        android:id="@+id/zielony"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="0"
+        android:max="255"
+        android:progress="0" />
+    <TextView
+        android:id="@+id/wartscNiebieska"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Składowa niebieska: 0"
+        android:paddingStart="10dp"
+        android:textColor="#0000FF"/>
+    <SeekBar
+        android:id="@+id/niebieski"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="0"
+        android:max="255"
+        android:progress="0" />
+
+</LinearLayout>
